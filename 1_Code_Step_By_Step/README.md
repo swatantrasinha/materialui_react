@@ -1,0 +1,1 @@
+This is create-react-app with unnecessary files removed
