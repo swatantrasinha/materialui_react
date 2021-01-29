@@ -6,7 +6,7 @@ import Home_Comp from './Home_Comp';
 
 
 function Show_React_Routing(props) {
-     const [buttonStatus, setButtonStatus] = useState(null);  
+     const [buttonStatus, setButtonStatus] = useState(null);
 
      const openMenu= (event) => {
         setButtonStatus(true);
@@ -16,6 +16,8 @@ function Show_React_Routing(props) {
     }
 
     return (
+    <div>
+    <h1> This is Show React Routing Page !!! </h1>
         <Router>
             <Button onClick={openMenu}>Menu</Button>
             <Menu open={buttonStatus} >
@@ -28,13 +30,12 @@ function Show_React_Routing(props) {
                 </MenuItem>
             </Menu>
 
-          
-          
+            <Route path="/about" component={About_Comp}/>
+            <Route exact path="/" component={Home_Comp} />
 
-            <Route path="/about"> <About_Comp/> </Route>
-            <Route exact path="/"> <Home_Comp /> </Route>
-
+            
         </Router>
+        </div>
     )
 }
 export default Show_React_Routing;
